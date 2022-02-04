@@ -1,0 +1,188 @@
+:root {
+    --clr-bg: aliceblue;
+    --clr-bg-alt: #ffffff;
+    --clr-fg: black;
+    --clr-shading: #778899;
+    --clr-shading-high-o: #77889980;
+    --clr-shading-mid-o: #77889940;
+    --clr-shading-low-o: #77889920;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Lato, sans-serif;
+    color: var(--clr-fg);
+    background-color: var(--clr-bg-alt);
+}
+
+main {
+    background-color: var(--clr-bg);
+    color: var(--clr-fg);
+    padding: 3rem max(1.6rem, 5vw);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3,
+p {
+    margin: 0;
+    font-weight: 400;
+}
+
+section {
+    outline: 1px solid var(--clr-shading-high-o);
+    box-shadow: 0 6px 3px -3px var(--clr-shading-high-o), 0 12px 6px -6px var(--clr-shading-mid-o);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    flex-basis: 400px;
+    max-width: 650px;
+}
+
+#applicants {
+    display: grid;
+    margin-bottom: 1rem;
+    border-block-end: 1px solid var(--clr-shading-mid-o);
+}
+
+#applicants h3 {
+    margin-block-end: 1rem;
+}
+
+#applicants>div:nth-child(odd) {
+    background-color: var(--clr-shading-low-o);
+}
+
+#applicants>* {
+    padding: 1.5rem 1.6rem;
+}
+
+#applicants>button {
+    margin-block-end: 1rem;
+}
+
+#result {
+    gap: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#result>div {
+    flex: 1;
+    flex-basis: 1;
+}
+
+#result p {
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+form input {
+    width: 100%;
+    padding: 1ch 1.6ch;
+    color: inherit;
+    background-color: var(--clr-bg);
+    border: 1px solid var(--clr-shading);
+}
+
+form input::before {
+    content: '£';
+}
+
+#borrow,
+#property-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-block: 2rem;
+}
+
+#borrow {
+    background-color: var(--clr-shading-mid-o);
+}
+
+#property-value {
+    background-color: var(--clr-shading-low-o);
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    padding: 0.6rem 1.2rem;
+    border-radius: 99vw;
+    background-color: transparent;
+    border: 2px solid var(--clr-shading);
+}
+
+button:hover,
+button:focus-visible {
+    background-blend-mode: multiply;
+    background-image: linear-gradient( to top, var(--clr-shading-mid-o), var(--clr-shading-low-o));
+    box-shadow: 0 4px 6px #fff4 inset;
+}
+
+#applicant-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1ch;
+}
+
+#calculate {
+    display: inline-block;
+    border: none;
+    margin: 0 auto 1.6rem;
+    width: fit-content;
+    background-color: orangered;
+    color: white;
+}
+
+i {
+    margin-inline-end: 0.5ch;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --clr-bg: #080f16;
+        --clr-fg: #ccddee;
+        --clr-bg-alt: black;
+    }
+    section {
+        box-shadow: 0 6px 3px -3px #000, 0 12px 6px -6px #000;
+    }
+    #applicants>div:nth-child(odd) {
+        background-color: var(--clr-shading-low-o);
+    }
+    button:hover,
+    button:focus-visible {
+        background-blend-mode: screen;
+    }
+}
