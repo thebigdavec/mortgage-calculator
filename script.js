@@ -38,7 +38,7 @@ class Applicant {
   }
 }
 
-addApplicant()
+addApplicant(true)
 
 function updateResults() {
   let incomeSum = 0
@@ -62,7 +62,7 @@ function updateResults() {
   }).format(propertyValue)
 }
 
-function addApplicant() {
+function addApplicant(shouldBeFocus) {
   const id = 'applicant' + (applicants.length + 1)
   const applicantDiv = document.createElement('div')
   applicantDiv.id = id
@@ -74,14 +74,14 @@ function addApplicant() {
   const group2 = document.createElement('div')
   group2.className = 'form-group'
   const label1 = document.createElement('label')
-  label1.for = id + '-income'
+  label1.setAttribute('for', id + '-income')
   label1.textContent = 'Annual Gross Income'
   const input1 = document.createElement('input')
   input1.type = 'number'
   input1.id = id + '-income'
   input1.placeholder = '£'
   const label2 = document.createElement('label')
-  label2.for = id + '-deposit'
+  label2.setAttribute('for', id + '-deposit')
   label2.textContent = 'Deposit'
   const input2 = document.createElement('input')
   input2.type = 'number'
@@ -96,8 +96,12 @@ function addApplicant() {
   applicantDiv.appendChild(header)
   applicantDiv.appendChild(formEl)
   document.getElementById('applicants').appendChild(applicantDiv)
+  if (shouldBeFocus) {
+    input1.focus()
+  }
 
   applicants.push(new Applicant(id))
+
   if (applicants.length > 1) {
     document.getElementById('remove-applicant').removeAttribute('hidden')
   }
