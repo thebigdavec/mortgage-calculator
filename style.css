@@ -16,6 +16,8 @@
 
 body {
     margin: 0;
+    background-color: var(--clr-bg);
+    color: var(--clr-fg);
 }
 
 #mba-mortgage-calculator {
@@ -25,7 +27,7 @@ body {
     padding-block: 1rem;
 }
 
-main {
+#mba-mortgage-calculator main {
     background-color: var(--clr-bg);
     color: var(--clr-fg);
     padding: 3rem max(1.6rem, 5vw);
@@ -36,17 +38,17 @@ main {
     justify-content: center;
 }
 
-h1 {
+#mba-mortgage-calculator h1 {
     text-align: center;
 }
 
-h3,
-p {
+#mba-mortgage-calculator h3,
+#mba-mortgage-calculator p {
     margin: 0;
     font-weight: 400;
 }
 
-section {
+#mba-mortgage-calculator section {
     outline: 1px solid var(--clr-shading-high-o);
     box-shadow: 0 6px 3px -3px var(--clr-shading-high-o), 0 12px 6px -6px var(--clr-shading-mid-o);
     display: flex;
@@ -57,50 +59,50 @@ section {
     max-width: 650px;
 }
 
-#applicants {
+#mba-mortgage-calculator #applicants {
     display: grid;
     margin-bottom: 1rem;
     border-block-end: 1px solid var(--clr-shading-mid-o);
 }
 
-#applicants h3 {
+#mba-mortgage-calculator #applicants h3 {
     margin-block-end: 1rem;
 }
 
-#applicants>div:nth-child(odd) {
+#mba-mortgage-calculator #applicants>div:nth-child(odd) {
     background-color: var(--clr-shading-low-o);
 }
 
-#applicants>* {
+#mba-mortgage-calculator #applicants>* {
     padding: 1.5rem 1.6rem;
 }
 
-#applicants>button {
+#mba-mortgage-calculator #applicants>button {
     margin-block-end: 1rem;
 }
 
-#result {
+#mba-mortgage-calculator #result {
     gap: 0;
     padding: 0;
     text-align: center;
 }
 
-#result>div {
+#mba-mortgage-calculator #result>div {
     flex: 1;
     flex-basis: 1;
 }
 
-#result p {
+#mba-mortgage-calculator #result p {
     font-size: 2rem;
 }
 
-form {
+#mba-mortgage-calculator form {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-form .form-group {
+#mba-mortgage-calculator form .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -108,7 +110,7 @@ form .form-group {
     flex-grow: 1;
 }
 
-form input {
+#mba-mortgage-calculator form input {
     width: 100%;
     padding: 1ch 1.6ch;
     color: inherit;
@@ -116,12 +118,12 @@ form input {
     border: 1px solid var(--clr-shading);
 }
 
-form input::before {
+#mba-mortgage-calculator form input::before {
     content: '£';
 }
 
-#borrow,
-#property-value {
+#mba-mortgage-calculator #borrow,
+#mba-mortgage-calculator #property-value {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,15 +131,15 @@ form input::before {
     padding-block: 2rem;
 }
 
-#borrow {
+#mba-mortgage-calculator #borrow {
     background-color: var(--clr-shading-mid-o);
 }
 
-#property-value {
+#mba-mortgage-calculator #property-value {
     background-color: var(--clr-shading-low-o);
 }
 
-button {
+#mba-mortgage-calculator button {
     cursor: pointer;
     color: inherit;
     padding: 0.6rem 1.2rem;
@@ -146,21 +148,21 @@ button {
     border: 2px solid var(--clr-shading);
 }
 
-button:hover,
-button:focus-visible {
+#mba-mortgage-calculator button:hover,
+#mba-mortgage-calculator button:focus-visible {
     background-blend-mode: multiply;
     background-image: linear-gradient( to top, var(--clr-shading-mid-o), var(--clr-shading-low-o));
     box-shadow: 0 4px 6px #fff4 inset;
 }
 
-#applicant-buttons {
+#mba-mortgage-calculator #applicant-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1ch;
 }
 
-#calculate {
+#mba-mortgage-calculator #calculate {
     display: inline-block;
     border: none;
     margin: 0 auto 1.6rem;
@@ -169,7 +171,7 @@ button:focus-visible {
     color: white;
 }
 
-i {
+#mba-mortgage-calculator i {
     margin-inline-end: 0.5ch;
 }
 
@@ -179,14 +181,14 @@ i {
         --clr-fg: #ccddee;
         --clr-bg-alt: black;
     }
-    section {
+    #mba-mortgage-calculator section {
         box-shadow: 0 6px 3px -3px #000, 0 12px 6px -6px #000;
     }
-    #applicants>div:nth-child(odd) {
+    #mba-mortgage-calculator #applicants>div:nth-child(odd) {
         background-color: var(--clr-shading-low-o);
     }
-    button:hover,
-    button:focus-visible {
+    #mba-mortgage-calculator button:hover,
+    #mba-mortgage-calculator button:focus-visible {
         background-blend-mode: screen;
     }
 }
