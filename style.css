@@ -16,9 +16,13 @@
 
 body {
     margin: 0;
+}
+
+#mba-mortgage-calculator {
     font-family: Lato, sans-serif;
     color: var(--clr-fg);
     background-color: var(--clr-bg-alt);
+    padding-block: 1rem;
 }
 
 main {
