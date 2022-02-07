@@ -42,6 +42,10 @@ body {
     text-align: center;
 }
 
+#mba-mortgage-calculator h3 {
+    font-size: 1.1rem;
+}
+
 #mba-mortgage-calculator h3,
 #mba-mortgage-calculator p {
     margin: 0;
@@ -49,7 +53,6 @@ body {
 }
 
 #mba-mortgage-calculator section {
-    outline: 1px solid var(--clr-shading-high-o);
     box-shadow: 0 6px 3px -3px var(--clr-shading-high-o), 0 12px 6px -6px var(--clr-shading-mid-o);
     display: flex;
     flex-direction: column;
@@ -85,15 +88,16 @@ body {
     gap: 0;
     padding: 0;
     text-align: center;
+    justify-content: flex-end;
 }
 
 #mba-mortgage-calculator #result>div {
-    flex: 1;
-    flex-basis: 1;
+    padding-block: 1rem;
+    transition: padding 250ms ease-out;
 }
 
 #mba-mortgage-calculator #result p {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 #mba-mortgage-calculator form {
@@ -190,5 +194,11 @@ body {
     #mba-mortgage-calculator button:hover,
     #mba-mortgage-calculator button:focus-visible {
         background-blend-mode: screen;
+    }
+}
+
+@media (min-width: 768px) {
+    #mba-mortgage-calculator #result>div {
+        padding-block: 4rem;
     }
 }
